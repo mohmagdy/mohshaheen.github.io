@@ -1,0 +1,30 @@
+published: true
+
+slug: "dubai-city-operations"
+pretitle: Enterprise Applications
+name: Dubai City Operations
+client:
+  name: Dubai Department of Tourism and Commerce Marketing
+  home: http://www.visitdubai.ae
+enterprise_app:  true
+brief: >
+  Developed for  Dubai Department of Tourism & Commerce Marketing (DTCM) for
+   assisting delegates visiting Dubai with all activities on their itinerary.
+   The App allows users to view there personalized schedule, review activities
+    and events, and obtain any information you may require during your visit to
+     Dubai with features like inAppChat, Photo galary, Arabian Weather integration,
+      Activity review, etc...
+icon: /assets/images/projects/dubai-city-operations/icon.webp
+main_image: /assets/images/projects/dubai-city-operations/iphone-screen-01.png
+screenshot:
+  - /assets/images/projects/dubai-city-operations/screenshot-01.jpg
+  - /assets/images/projects/dubai-city-operations/screenshot-03.jpg
+  - /assets/images/projects/dubai-city-operations/screenshot-04.jpg
+  - /assets/images/projects/dubai-city-operations/screenshot-10.jpg
+  - /assets/images/projects/dubai-city-operations/screenshot-16.jpg
+  - /assets/images/projects/dubai-city-operations/screenshot-20.jpg
+  - /assets/images/projects/dubai-city-operations/screenshot-24.jpg
+  - /assets/images/projects/dubai-city-operations/screenshot-25.jpg
+platforms:
+  - type: ios
+  - type: android

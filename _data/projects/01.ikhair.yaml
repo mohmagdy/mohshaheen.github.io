@@ -1,0 +1,34 @@
+published: true
+
+slug: 'ikhair'
+pretitle: Mobile Donation Platform
+name: iKhair
+home: http://iKhair.net
+brief: >
+  Mobile Donation platform , where you can easily donate to well
+   known and government licensed charity organizations across Arab's
+    world works as a hub for charity organizations. This application
+     makes donations simple and easy.
+icon: /assets/images/projects/ikhair/icon.PNG
+main_image: /assets/images/projects/ikhair/iphone-screen-01.png
+elements_image: /assets/images/projects/ikhair/bg_elements_ikhair.png
+device_images:
+  iphone:
+    - /assets/images/projects/ikhair/iphone-screen-01.png
+screenshot:
+  - /assets/images/projects/ikhair/screenshot-01.PNG
+  - /assets/images/projects/ikhair/screenshot-02.PNG
+  - /assets/images/projects/ikhair/screenshot-03.PNG
+  - /assets/images/projects/ikhair/screenshot-04.PNG
+platforms:
+  - type: web
+    link: http://ikhair.net
+
+  - type: ios
+    link: https://itunes.apple.com/ae/app/ikhair/id542915812
+
+  - type: android
+    link: https://play.google.com/store/apps/details?id=com.quantatil.ikhar
+
+  - type: blackberry
+    link: https://appworld.blackberry.com/webstore/content/124143/?countrycode=FR&lang=en
