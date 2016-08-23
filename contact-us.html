@@ -121,12 +121,20 @@
 					
 						<div class="col-md-5 col-sm-12">
 							<form 
-							action="https://formspree.io/sales@appgain.io" method="POST"
+							id="contact-form"
 							class="form-email" >
+							
+							 <div class="row">
+    <div class="alert hidden" role="alert">
+      <i class="fa "></i><span></span>
+    </div>
+  </div>
 								<input class="input-standard validate-required" type="text" name="name" placeholder="Your Name">
 								<input class="input-standard validate-email validate-required" type="text"  placeholder="Email Address" name="_replyto">
+								    <input type="text" name="_subject" placeholder=" " class="input-standard validate-required" />
+
 								<textarea class="input-standard validate-required" name="message" placeholder="Your Message" rows="4"></textarea>
-								<input type="submit" class="btn btn-sm"  value="Send">
+								<input type="submit" class="btn btn-sm"  value="Send" id="contact-form-submit">
 							</form>
 						</div>
 					
@@ -233,5 +241,77 @@
         <script src="js/countdown.min.js"></script>
         <script src="js/parallax.js"></script>
     	<script src="js/scripts.js"></script>
+    	
+    	<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(){
+  var formspree_endpoint = 'sales+website@appgain.io';
+  $('form#contact-form').submit(function(e) {
+
+    // return false so form submits through jQuery rather than reloading page.
+    if (e.preventDefault) e.preventDefault();
+    else e.returnValue = false;
+
+    // serialize all the data in the form
+    var data = $('form#contact-form').serialize();
+
+
+    $.ajax({
+      url: '//formspree.io/'+formspree_endpoint,
+      method: "POST",
+      data: data,
+      dataType: "json",
+      beforeSend: function( xhr ) {
+         $('#contact-form-submit i').removeClass('hidden');
+      },
+      success: function(data) {
+        console.log('success');
+        console.log(data);
+
+        $('#contact-form-submit i')
+          .removeClass('fa-spinner fa-pulse fa-spin');
+          // .addClass('fa-check');
+
+        // $('#contact-form-submit')
+        //     .removeClass('btn-primary')
+        //     .addClass('btn-success');
+
+        $('form#contact-form').find("input, textarea").val("");
+
+        $('form#contact-form .alert i')
+          .addClass('fa-check');
+
+        $('form#contact-form .alert span')
+          .text('  Your Message was Sent successfully');
+
+        $('form#contact-form .alert')
+          .addClass('alert-success')
+          .removeClass('hidden');
+      },
+      error: function(data) {
+        console.log('error');
+        console.log(data);
+
+        $('#contact-form-submit i')
+          .removeClass('fa-spinner fa-pulse fa-spin');
+          
+
+        $('form#contact-form .alert i')
+          .addClass('fa-exclamation-triangle');
+
+        $('form#contact-form .alert span')
+          .text('  Something went wrong please try again later');
+
+        $('form#contact-form .alert')
+          .addClass('alert-danger')
+          .removeClass('hidden');
+
+      }
+    });
+
+    return false;
+
+  });
+});
+</script>
     </body>
 </html>
