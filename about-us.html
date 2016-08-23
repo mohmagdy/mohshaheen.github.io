@@ -155,7 +155,6 @@
 		
 				</div>
 			</section>
-				
 			<section class="contact-2">
 				<div class="container">
 					<div class="row">
@@ -186,15 +185,34 @@
 						</div>
 					
 						<div class="col-md-5 col-sm-12">
-							<form class="form-email" data-success="Thanks for your enquiry, we'll be in touch shortly." data-error="Please fill all fields correctly.">
+							<form 
+							id="contact-form"
+							class="form-email" >
+							
+							 <div class="row">
+    <div class="alert hidden" role="alert">
+      <i class="fa "></i><span></span>
+    </div>
+  </div>
 								<input class="input-standard validate-required" type="text" name="name" placeholder="Your Name">
-								<input class="input-standard validate-email validate-required" type="text" name="email" placeholder="Email Address">
+								<input class="input-standard validate-email validate-required" type="text"  placeholder="Email Address" name="_replyto">
+							
+<!-- 
+							<input type="text" name="_subject" placeholder="Subject" class="input-standard validate-required" />
+ -->
+
 								<textarea class="input-standard validate-required" name="message" placeholder="Your Message" rows="4"></textarea>
-								<input type="submit" class="btn btn-sm" value="Send Message">
+								<input type="submit" class="btn btn-sm"  value="Send" id="contact-form-submit">
 							</form>
 						</div>
 					
 					</div>
+				</div>
+			</section>
+			
+			<section class="fullwidth-map">
+				<div class="map-holder">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d437.48015290233826!2d31.278121779091755!3d29.974730133622398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfdc193df9c99e04f!2sEl+Baklawy+Pharmacy!5e0!3m2!1sen!2sae!4v1471719657837"></iframe>
 				</div>
 			</section>
 						<footer class="footer-1">
@@ -206,7 +224,7 @@
 								<li><a href="privacy.html" target="_self">Privacy Policy</a></li>
 								
 								
-								<li><a href="contactus.html" target="_self">Contact Us</a></li>
+								<li><a href="contact-us.html" target="_self">Contact Us</a></li>
 							</ul>
 						</div>
 					
@@ -291,6 +309,77 @@
         <script src="js/countdown.min.js"></script>
         <script src="js/parallax.js"></script>
     	<script src="js/scripts.js"></script>
+    	
+    	<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(){
+  var formspree_endpoint = 'sales+website@appgain.io';
+  $('form#contact-form').submit(function(e) {
+
+    // return false so form submits through jQuery rather than reloading page.
+    if (e.preventDefault) e.preventDefault();
+    else e.returnValue = false;
+
+    // serialize all the data in the form
+    var data = $('form#contact-form').serialize();
+
+
+    $.ajax({
+      url: '//formspree.io/'+formspree_endpoint,
+      method: "POST",
+      data: data,
+      dataType: "json",
+      beforeSend: function( xhr ) {
+         $('#contact-form-submit i').removeClass('hidden');
+      },
+      success: function(data) {
+        console.log('success');
+        console.log(data);
+
+        $('#contact-form-submit i')
+          .removeClass('fa-spinner fa-pulse fa-spin');
+          // .addClass('fa-check');
+
+        // $('#contact-form-submit')
+        //     .removeClass('btn-primary')
+        //     .addClass('btn-success');
+
+        $('form#contact-form').find("input, textarea").val("");
+
+        $('form#contact-form .alert i')
+          .addClass('fa-check');
+
+        $('form#contact-form .alert span')
+          .text('  Your Message was Sent successfully');
+
+        $('form#contact-form .alert')
+          .addClass('alert-success')
+          .removeClass('hidden');
+      },
+      error: function(data) {
+        console.log('error');
+        console.log(data);
+
+        $('#contact-form-submit i')
+          .removeClass('fa-spinner fa-pulse fa-spin');
+          
+
+        $('form#contact-form .alert i')
+          .addClass('fa-exclamation-triangle');
+
+        $('form#contact-form .alert span')
+          .text('  Something went wrong please try again later');
+
+        $('form#contact-form .alert')
+          .addClass('alert-danger')
+          .removeClass('hidden');
+
+      }
+    });
+
+    return false;
+
+  });
+});
+</script>
     </body>
 </html>
-				
