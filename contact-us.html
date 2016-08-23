@@ -120,11 +120,13 @@
 						</div>
 					
 						<div class="col-md-5 col-sm-12">
-							<form class="form-email" data-success="Thanks for your enquiry, we'll be in touch shortly." data-error="Please fill all fields correctly.">
+							<form 
+							action="https://formspree.io/sales@appgain.io" method="POST"
+							class="form-email" data-success="Thanks for your enquiry, we'll be in touch shortly." data-error="Please fill all fields correctly.">
 								<input class="input-standard validate-required" type="text" name="name" placeholder="Your Name">
-								<input class="input-standard validate-email validate-required" type="text" name="email" placeholder="Email Address">
+								<input class="input-standard validate-email validate-required" type="text"  placeholder="Email Address" name="_replyto">
 								<textarea class="input-standard validate-required" name="message" placeholder="Your Message" rows="4"></textarea>
-								<input type="submit" class="btn btn-sm" value="Send Message">
+								<input type="submit" class="btn btn-sm"  value="Send">
 							</form>
 						</div>
 					
