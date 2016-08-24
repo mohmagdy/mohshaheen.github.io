@@ -1,502 +1,629 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-      <title>Smart DeepLink, Mobile App Backend,Mobile Marketing Cloud service </title>
-<meta name="description" content="Drive traffic to your app , using smart deeplink and automated mobile marketing">
-<meta name="keywords" content="smart deep linking platform for mobile apps, deeplink sdk for ios and android, deeplinking framework, measure app traffic and engagement, deeplink metrics, link redirection system, deeplink ad retargeting, mobile dashboard metrics, parse server hosting "/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="canonical" href="http://www.appgain.io"/>
-<meta name="robots" content="index, follow" />
-<meta name="copyright" content="Copyright © 2016 AppGain" />
-<meta name="author" content="Appgain" />
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#03a9f4">
-<meta name="apple-mobile-web-app-title" content="appgain.io">
-<meta name="application-name" content="appgain.io">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Smart DeepLink, Mobile App Backend,Mobile Marketing Cloud service
+    </title>
+    <meta content=
+    "Drive traffic to your app , using smart deeplink and automated mobile marketing"
+    name="description">
+    <meta content=
+    "smart deep linking platform for mobile apps, deeplink sdk for ios and android, deeplinking framework, measure app traffic and engagement, deeplink metrics, link redirection system, deeplink ad retargeting, mobile dashboard metrics, parse server hosting"
+    name="keywords">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="http://www.appgain.io" rel="canonical">
+    <meta content="index, follow" name="robots">
+    <meta content="Copyright © 2016 AppGain" name="copyright">
+    <meta content="Appgain" name="author">
+    <link href="/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes=
+    "57x57">
+    <link href="/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes=
+    "60x60">
+    <link href="/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes=
+    "72x72">
+    <link href="/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes=
+    "76x76">
+    <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="/manifest.json" rel="manifest">
+    <link color="#03a9f4" href="/safari-pinned-tab.svg" rel="mask-icon">
+    <meta content="appgain.io" name="apple-mobile-web-app-title">
+    <meta content="appgain.io" name="application-name">
+    <link href="css/pe-icon-7-stroke.css" media="all" rel="stylesheet" type=
+    "text/css">
+    <link href="css/et-line-icons.css" media="all" rel="stylesheet" type=
+    "text/css">
+    <link href="css/font-awesome.min.css" media="all" rel="stylesheet" type=
+    "text/css">
+    <link href="css/themify-icons.css" media="all" rel="stylesheet" type=
+    "text/css">
+    <link href="css/bootstrap.min.css" media="all" rel="stylesheet" type=
+    "text/css">
+    <link href="css/flexslider.min.css" media="all" rel="stylesheet" type=
+    "text/css">
+    <link href="css/lightbox.min.css" media="all" rel="stylesheet" type=
+    "text/css">
+    <link href="css/theme.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" media="all" rel="stylesheet" type="text/css">
+    <link href=
+    "http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,400italic,500%7CMontserrat:400,700"
+    rel="stylesheet" type="text/css">
+    <link href=
+    "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700"
+    rel="stylesheet" type="text/css">
+    <link href="css/font-opensans.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="nav-container">
+      <nav class="nav-1 nav-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <a class="home-link" href="#"><img alt="Logo" class="logo" src=
+              "img/appgain-logo.png"></a>
+              <ul class="menu">
+                <li>
+                  <a href="index.html">HOME</a>
+                </li>
 
-        <link href="css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css" media="all">
-        <link href="css/et-line-icons.css" rel="stylesheet" type="text/css" media="all">
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
-        <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="css/flexslider.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,400italic,500%7CMontserrat:400,700" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700" rel="stylesheet" type="text/css">
-        <link href="css/font-opensans.css" rel="stylesheet" type="text/css">
-    </head>
+                <li>
+                  <a href="smart-deeplink.html">Smart DeepLink</a>
+                </li>
 
-    <body>
+                <li>
+                  <a href="app-backend.html">App Backend</a>
+                </li>
 
-				
-		<div class="nav-container">
-			
-			
-		
-			<nav class="nav-1 nav-light">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-							<a href="#" class="home-link">
-								<img alt="Logo" class="logo" src="img/appgain-logo.png">
-							</a>
-							<ul class="menu">
-								<li><a href="index.html">HOME</a></li>
-								
-								<li><a href="smart-deeplink.html">Smart DeepLink</a></li>
-								<li><a href="app-backend.html">App Backend</a></li>
+                <li>
+                  <a href="commingsoon.html">App Boost</a>
+                </li>
 
-								<li><a href="commingsoon.html">App Boost</a></li>
+                <li>
+                  <a href="http://www.appgain.io/blog">Blog</a>
+                </li>
 
-								
-								<li><a href="http://www.appgain.io/blog">Blog </a></li><li><a href="contact-us.html">Contact Us</a></li>
-								
-								<li><a href="https://dashboard.appgain.io">Log In</a></li>
-								
-							</ul>
-						
-							
-						</div>
-					</div>
-				</div>
-			
-				<div class="mobile-toggle">
-					<div class="bar-1"></div>
-					<div class="bar-2"></div>
-				</div>
-			</nav>
-		
-		</div>
-		
-	<div class="main-container">
-					
-			<section class="hero-slider centered-text-slider">
-				<ul class="slides">
-					<li class="overlay text-center">
-				
-						<div class="background-image-holder">
-							<img alt="Slide Background" class="background-image" src="img/Header1-03.png">
-						</div>
-				
-						<div class="container vertical-align">
-							<div class="row">
-								<div class="col-sm-12 text-center">
-									<h1 class="text-white">Smart DeepLink</h1>
-									<p class="super-lead text-white">Close the gap between email marketing and your App</p><p class="super-lead text-white"> </p><p class="super-lead text-white"> </p><p class="super-lead text-white"> </p><p class="super-lead text-white"> </p>
-									
-									
-								</div>
-							</div>
-						</div>
-					</li>
-				
-				</ul>
-			</section>
-			
-			<section class="image-block">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4 col-sm-7">
-							<div class="text-block">
-								<h2>What its DeepLink?&nbsp;</h2>
-								<p class="lead">
-									deep links route with your app URI, which is like a web domain for your app - instead of https://mysite.com/ page, you get a link that looks like this: myapp://page . Most apps already have a URI scheme, but if not you can easily register for one.
-		
-		The problem with traditional deep links is that they don't work if you don't have the app installed. The phone will look for the app content at the address given by the URI scheme: if the app isn't installed, the phone can't find the content and will show an error.
-		
-								</p>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			
-				<div class="image-holder col-sm-4 pull-right col-md-6">
-					<div class="background-image-holder">
-						<img alt="Slide Background" class="background-image" src="img/whats_deeplink-01.png">
-					</div>
-				</div>
-			
-			</section>
-			
-			<a id="text-wikkkth-image-block" class="in-page-link"></a>
-			
-			<section class="image-block">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-5 col-sm-7">
-							<div class="text-block">
-								<div class="detail-line"></div>
-								<h5>Whats Smart DeepLink?
-		</h5>
-								
-								<p>
-									Smart DeepLink  look similar to web links, but act differently depending on whether or not an app is installed. If the app is installed, they link straight to the content, like traditional deep links. If the app is not installed, then the link will direct to the relevant app store to download the app, and remember the content that a user was linked to. <br><br><br>When the app has been downloaded, the user can be taken to specific content immediately. The presentation of specific content is "deferred" until after the install, then shown to the user.
-								</p>
-								
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			
-				<div class="image-holder col-md-6 col-sm-4 pull-right">
-					<div class="background-image-holder">
-						<img alt="Slide Background" class="background-image" src="img/whats_smart_deeplink-01.png">
-					</div>
-				</div>
-			
-			</section>
-			
-			<section class="feature-lists large-pad">
-				<div class="container">
-				
-					<div class="row">
-						<div class="col-md-4 col-sm-6">
-							<div class="feature-list text-center">
-								<i class="icon pe-7s-vector icon-large"></i>
-								<h5>Universal Redirector
-		</h5>
-								<p>
-									route users to the optimal content based on their device
-		
-		
-								</p>
-							</div>
-						</div>
-						
-						<div class="col-md-4 col-sm-6">
-							<div class="feature-list text-center">
-								<i class="icon ti ti-settings icon-large"></i>
-								<h5>Dynamic
-		
-		</h5>
-								<p>Even after sending it, you still can edit the deeplink and fall back actions 
-		</p>
-							</div>
-						</div><div class="col-md-4 col-sm-6">
-							<div class="feature-list text-center">
-								<i class="icon ti ti-layers-alt icon-large"></i>
-								<h5>SDK</h5>
-								<p>
-									Simple  integration and support for all major mobile and app development platforms.
-		
-		
-		
-								</p>
-							</div>
-						</div><div class="col-md-4 col-sm-6">
-							<div class="feature-list text-center">
-								<i class="icon ti ti-link icon-large"></i>
-								<h5>Generic
-		 
-		
-		</h5>
-								<p>
-									Can be used even with out app 
-		
-		 
-		
-		
-		
-		
-								</p>
-							</div>
-						</div><div class="col-md-4 col-sm-6">
-							<div class="feature-list text-center">
-								<i class="icon et-line-pricetags icon-large"></i>
-								<h5>Metadata Passing
-		
-		
-		</h5>
-								<p>Break the App Store black box
-		</p>
-							</div>
-						</div><div class="col-md-4 col-sm-6">
-							<div class="feature-list text-center">
-								<i class="icon ti ti-wand icon-large"></i>
-								<h5>Flexible 
-		 
-		</h5>
-								<p>Any Scenario redirection action can be defined on per platform  (Send SMS,Open WebPage, Send Email,Like FB&nbsp;<br></p>
-							</div>
-						</div><div class="col-md-4 col-sm-6">
-							<div class="feature-list text-center">
-								<i class="icon ti ti-location-arrow icon-large"></i>
-								<h5>Location Aware
-		 
-		
-		</h5>
-								<p>
-									Deliver content tailored to user GEO location
-		
-		 
-		
-		
-		
-		
-								</p>
-							</div>
-						</div><div class="col-md-4 col-sm-6">
-							<div class="feature-list text-center">
-								<i class="icon ti ti-stats-up icon-large"></i>
-								<h5>Analytics
-		 
-		
-		</h5>
-								<p>
-									Measure and analyze your progress towards acquisition and activation goals</p>
-							</div>
-						</div><div class="col-md-4 col-sm-6">
-							<div class="feature-list text-center">
-								<i class="icon fa fa-star-o icon-large"></i>
-								<h5>Smart Banner
-		 
-		
-		</h5>
-								<p>
-									Activate more users with the right content at the right time
-		 
-		
-		
-		
-		
-								</p>
-							</div>
-						</div>
-						
-						
-		
-					</div>
-				</div>
-			</section>
-			
-			<section class="services-combo-1">
-		
-				<i class="jumbo ti ti-cloud"></i>
-		
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<p class="text-white super-lead">
-								What you get from smart DeepLink?</p>
-							
-							<a class="btn btn-filled" href="http://www.appgain.io/blog/tag/smart-deeplink/">Discover more</a>
-						</div>
-						
-						
-					<div class="col-sm-12 col-md-5">
-							<div class="side-icon-feature">
-								<div class="icon">
-									<i class="ti ti-announcement"></i>
-								</div>
-								<div class="content">
-									<h5 class="text-white">Email Marketing : +65%&nbsp;</h5>
-									<p class="text-white">
-										More Email to App conversion
-		</p>
-								</div>
-							</div>
-						
-							<div class="side-icon-feature">
-								<div class="icon">
-									<i class="pe-7s-users"></i>
-								</div>
-								<div class="content">
-									<h5 class="text-white">App User Engagment : +31%</h5>
-									<p class="text-white">
-										More Conversion to Signup
-		
-									</p>
-								</div>
-							</div>
-						
-							<div class="side-icon-feature">
-								<div class="icon">
-									<i class="ti ti-thumb-up"></i>
-								</div>
-								<div class="content">
-									<h5 class="text-white">Ads Cost: -16%</h5>
-									<p class="text-white">
-										Less cost per install
-		
-									</p>
-								</div>
-							</div>
-						</div></div>
-				</div>
-			</section>
-			
-			<section class="contained-projects">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="text-block">
-								<div class="detail-line"></div>
-								<h5>Use Cases</h5>
-								<h2>Where Smart DeepLink is used ?</h2>
-							</div>
-						</div>
-						
-					</div>
-				
-					
-				
-					<div class="row">
-					<div class="col-md-4 col-sm-6 project" data-filter="Mobile Marketing">
-							<a href="#">
-								<div class="background-image-holder">
-									<img alt="project image" class="background-image" src="img/appinstalls-01.png">
-								</div>
-							</a>
-							<h2>App installs
-		</h2>
-							
-							<h5> Boost App user acquisition over multi channel &nbsp;marketing&nbsp</h5>
-						</div>
-						<div class="col-md-4 col-sm-6 project" data-filter="Mobile Marketing">
-							<a href="#">
-								<div class="background-image-holder">
-									<img alt="project image" class="background-image" src="img/email_marketing-01.png">
-								</div>
-							</a>
-							<h2>Powerful Email Marketing
-		</h2>
-							
-							<h5>Send users from email to your app specific &nbsp;pages&nbsp;</h5>
-						</div>
-						<div class="col-md-4 col-sm-6 project" data-filter="Mobile Marketing">
-							<a href="#">
-								<div class="background-image-holder">
-									<img alt="project image" class="background-image" src="img/viral_content-01.png">
-								</div>
-							</a>
-							<h2>Viral App Content
-		</h2>
-							
-							<h5>your App content is sharable &nbsp;and viewable over social networks&nbsp;</h5>
-						</div>
-						<div class="col-md-4 col-sm-6 project" data-filter="Mobile Marketing">
-							<a href="#">
-								<div class="background-image-holder">
-									<img alt="project image" class="background-image" src="img/engage_users-01.png">
-								</div>
-							</a>
-							<h2>Engage Your Users
-		
-		
-		</h2>
-							
-							<h5>Send your users personalizid &nbsp;offers ,without codes</h5>
-						</div>
-						<div class="col-md-4 col-sm-6 project" data-filter="Mobile Marketing">
-							<a href="#">
-								<div class="background-image-holder">
-									<img alt="project image" class="background-image" src="img/advertise-inapp.png">
-								</div>
-							</a>
-							<h2>Advertise in-app content
-		
-		
-		</h2>
-							
-							<h5>existing app user will be taken to the in-app content , while A new user will be directed to that content post-install.</h5>
-						</div>
-						<div class="col-md-4 col-sm-6 project" data-filter="Mobile Marketing">
-							<a href="#">
-								<div class="background-image-holder">
-									<img alt="project image" class="background-image" src="img/onboarding-01.png">
-								</div>
-							</a>
-							<h2>Personalized On Boarding
-		
-		
-		
-		</h2>
-							
-							<h5>First impression last , with smart Deeplink deliver personalized first app run experience with something unique, like a picture of the friend who invited them</h5>
-						</div>
-					
-					</div>
-				</div>
-			</section>
-			
-			<section class="action-strip-1">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 text-center">
-							<span class="alt-font">Ready to get started?</span>
-							<span class="title">We're ready to help</span>
-							<i class="icon pe-7s-look"></i>
-							<a class="text-link" href="contact-us.html">Start a project with us <i class="icon ti ti-arrow-right arrow_right"></i></a>
-						</div>
-					</div>
-				</div>
-			</section>
-						<footer class="footer-2">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-6">
-							<a href="index.html" target="_blank">
-								<img alt="logo" class="logo" src="img/appgain-logo.png">
-							</a>
-							<span class="tagline">Mobile App Marketing platform</span>
-						</div>
-					
-						<div class="col-sm-6 text-right">
-							<ul class="social-links">
-								<li><a href="https://twitter.com/appgain" target="_self"><i class="icon ti ti-twitter-alt"></i></a></li>
-								<li><a href="https://www.facebook.com/appgain" target="_blank"><i class="icon ti ti-facebook"></i></a></li>
-								
-							</ul>
-						</div>
-					</div>
-				
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="footer-lower">
-								<a class="text-link" href="mailto:hello@appgain.io">hello@appgain.io<i class="icon ti ti-arrow-right arrow_right"></i></a>
-								<span class="copyright">© Copyright 2016 Appgain.io</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-		</div>
-		
-				
-			<script>
-		
- (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
- (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
- m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
- })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                <li>
+                  <a href="contact-us.html">Contact Us</a>
+                </li>
 
- ga('create', 'UA-74855128-2', 'auto');
- ga('send', 'pageview');
-		</script>	
-		<script src="js/jquery.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/flexslider.min.js"></script>
-        <script src="js/lightbox.min.js"></script>
-        <script src="js/twitterfetcher.min.js"></script>
-        <script src="js/spectragram.min.js"></script>
-        <script src="js/smooth-scroll.min.js"></script>
-        <script src="js/jquery.plugin.min.js"></script>
-        <script src="js/placeholders.min.js"></script>
-        <script src="js/countdown.min.js"></script>
-        <script src="js/parallax.js"></script>
-    	<script src="js/scripts.js"></script>
-    </body>
+                <li>
+                  <a href="https://dashboard.appgain.io">Log In</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-toggle">
+          <div class="bar-1">
+          </div>
+
+          <div class="bar-2">
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="main-container">
+      <section class="hero-slider centered-text-slider">
+        <ul class="slides">
+          <li class="overlay text-center">
+            <div class="background-image-holder">
+              <img alt="Slide Background" class="background-image" src=
+              "img/Header1-03.png">
+            </div>
+
+            <div class="container vertical-align">
+              <div class="row">
+                <div class="col-sm-12 text-center">
+                  <h1 class="text-white">
+                    Smart DeepLink
+                  </h1>
+
+                  <p class="super-lead text-white">
+                    Close the gap between email marketing and your App
+                  </p>
+
+                  <p class="super-lead text-white">
+                  </p>
+
+                  <p class="super-lead text-white">
+                  </p>
+
+                  <p class="super-lead text-white">
+                  </p>
+
+                  <p class="super-lead text-white">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="image-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-7">
+              <div class="text-block">
+                <h2>
+                  What its DeepLink?&nbsp;
+                </h2>
+
+                <p class="lead">
+                  deep links route with your app URI, which is like a web
+                  domain for your app - instead of https://mysite.com/ page,
+                  you get a link that looks like this: myapp://page . Most apps
+                  already have a URI scheme, but if not you can easily register
+                  for one. The problem with traditional deep links is that they
+                  don't work if you don't have the app installed. The phone
+                  will look for the app content at the address given by the URI
+                  scheme: if the app isn't installed, the phone can't find the
+                  content and will show an error.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="image-holder col-sm-4 pull-right col-md-6">
+          <div class="background-image-holder">
+            <img alt="Slide Background" class="background-image" src=
+            "img/whats_deeplink-01.png">
+          </div>
+        </div>
+      </section>
+      <a class="in-page-link" id="text-wikkkth-image-block"></a>
+      <section class="image-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 col-sm-7">
+              <div class="text-block">
+                <div class="detail-line">
+                </div>
+
+                <h5>
+                  Whats Smart DeepLink?
+                </h5>
+
+                <p>
+                  Smart DeepLink look similar to web links, but act differently
+                  depending on whether or not an app is installed. If the app
+                  is installed, they link straight to the content, like
+                  traditional deep links. If the app is not installed, then the
+                  link will direct to the relevant app store to download the
+                  app, and remember the content that a user was linked to.<br>
+                  <br>
+                  <br>
+                  When the app has been downloaded, the user can be taken to
+                  specific content immediately. The presentation of specific
+                  content is "deferred" until after the install, then shown to
+                  the user.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="image-holder col-md-6 col-sm-4 pull-right">
+          <div class="background-image-holder">
+            <img alt="Slide Background" class="background-image" src=
+            "img/whats_smart_deeplink-01.png">
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-lists large-pad">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="feature-list text-center">
+                <i class="icon pe-7s-vector icon-large"></i>
+                <h5>
+                  Universal Redirector
+                </h5>
+
+                <p>
+                  route users to the optimal content based on their device
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="feature-list text-center">
+                <i class="icon ti ti-settings icon-large"></i>
+                <h5>
+                  Dynamic
+                </h5>
+
+                <p>
+                  Even after sending it, you still can edit the deeplink and
+                  fall back actions
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="feature-list text-center">
+                <i class="icon ti ti-layers-alt icon-large"></i>
+                <h5>
+                  SDK
+                </h5>
+
+                <p>
+                  Simple integration and support for all major mobile and app
+                  development platforms.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="feature-list text-center">
+                <i class="icon ti ti-link icon-large"></i>
+                <h5>
+                  Generic
+                </h5>
+
+                <p>
+                  Can be used even with out app
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="feature-list text-center">
+                <i class="icon et-line-pricetags icon-large"></i>
+                <h5>
+                  Metadata Passing
+                </h5>
+
+                <p>
+                  Break the App Store black box
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="feature-list text-center">
+                <i class="icon ti ti-wand icon-large"></i>
+                <h5>
+                  Flexible
+                </h5>
+
+                <p>
+                  Any Scenario redirection action can be defined on per
+                  platform (Send SMS,Open WebPage, Send Email,Like FB&nbsp;<br>
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="feature-list text-center">
+                <i class="icon ti ti-location-arrow icon-large"></i>
+                <h5>
+                  Location Aware
+                </h5>
+
+                <p>
+                  Deliver content tailored to user GEO location
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="feature-list text-center">
+                <i class="icon ti ti-stats-up icon-large"></i>
+                <h5>
+                  Analytics
+                </h5>
+
+                <p>
+                  Measure and analyze your progress towards acquisition and
+                  activation goals
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="feature-list text-center">
+                <i class="icon fa fa-star-o icon-large"></i>
+                <h5>
+                  Smart Banner
+                </h5>
+
+                <p>
+                  Activate more users with the right content at the right time
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-combo-1">
+        <i class="jumbo ti ti-cloud"></i>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="text-white super-lead">
+                What you get from smart DeepLink?
+              </p>
+              <a class="btn btn-filled" href=
+              "http://www.appgain.io/blog/tag/smart-deeplink/">Discover
+              more</a>
+            </div>
+
+            <div class="col-sm-12 col-md-5">
+              <div class="side-icon-feature">
+                <div class="icon">
+                  <i class="ti ti-announcement"></i>
+                </div>
+
+                <div class="content">
+                  <h5 class="text-white">
+                    Email Marketing : +65%&nbsp;
+                  </h5>
+
+                  <p class="text-white">
+                    More Email to App conversion
+                  </p>
+                </div>
+              </div>
+
+              <div class="side-icon-feature">
+                <div class="icon">
+                  <i class="pe-7s-users"></i>
+                </div>
+
+                <div class="content">
+                  <h5 class="text-white">
+                    App User Engagment : +31%
+                  </h5>
+
+                  <p class="text-white">
+                    More Conversion to Signup
+                  </p>
+                </div>
+              </div>
+
+              <div class="side-icon-feature">
+                <div class="icon">
+                  <i class="ti ti-thumb-up"></i>
+                </div>
+
+                <div class="content">
+                  <h5 class="text-white">
+                    Ads Cost: -16%
+                  </h5>
+
+                  <p class="text-white">
+                    Less cost per install
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contained-projects">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="text-block">
+                <div class="detail-line">
+                </div>
+
+                <h5>
+                  Use Cases
+                </h5>
+
+                <h2>
+                  Where Smart DeepLink is used ?
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 col-sm-6 project" data-filter=
+            "Mobile Marketing">
+              <a href="#">
+              <div class="background-image-holder">
+                <img alt="project image" class="background-image" src=
+                "img/appinstalls-01.png">
+              </div></a>
+              <h2>
+                App installs
+              </h2>
+
+              <h5>
+                Boost App user acquisition over multi channel
+                &nbsp;marketing&nbsp;
+              </h5>
+            </div>
+
+            <div class="col-md-4 col-sm-6 project" data-filter=
+            "Mobile Marketing">
+              <a href="#">
+              <div class="background-image-holder">
+                <img alt="project image" class="background-image" src=
+                "img/email_marketing-01.png">
+              </div></a>
+              <h2>
+                Powerful Email Marketing
+              </h2>
+
+              <h5>
+                Send users from email to your app specific &nbsp;pages&nbsp;
+              </h5>
+            </div>
+
+            <div class="col-md-4 col-sm-6 project" data-filter=
+            "Mobile Marketing">
+              <a href="#">
+              <div class="background-image-holder">
+                <img alt="project image" class="background-image" src=
+                "img/viral_content-01.png">
+              </div></a>
+              <h2>
+                Viral App Content
+              </h2>
+
+              <h5>
+                your App content is sharable &nbsp;and viewable over social
+                networks&nbsp;
+              </h5>
+            </div>
+	  </div>
+          
+          <div class="row">
+            <div class="col-md-4 col-sm-6 project" data-filter=
+            "Mobile Marketing">
+              <a href="#">
+              <div class="background-image-holder">
+                <img alt="project image" class="background-image" src=
+                "img/engage_users-01.png">
+              </div></a>
+              <h2>
+                Engage Your Users
+              </h2>
+
+              <h5>
+                Send your users personalizid &nbsp;offers ,without codes
+              </h5>
+            </div>
+
+            <div class="col-md-4 col-sm-6 project" data-filter=
+            "Mobile Marketing">
+              <a href="#">
+              <div class="background-image-holder">
+                <img alt="project image" class="background-image" src=
+                "img/advertise-inapp.png">
+              </div></a>
+              <h2>
+                Advertise in-app content
+              </h2>
+
+              <h5>
+                existing app user will be taken to the in-app content , while A
+                new user will be directed to that content post-install.
+              </h5>
+            </div>
+
+            <div class="col-md-4 col-sm-6 project" data-filter=
+            "Mobile Marketing">
+              <a href="#">
+              <div class="background-image-holder">
+                <img alt="project image" class="background-image" src=
+                "img/onboarding-01.png">
+              </div></a>
+              <h2>
+                Personalized On Boarding
+              </h2>
+
+              <h5>
+                First impression last , with smart Deeplink deliver
+                personalized first app run experience with something unique,
+                like a picture of the friend who invited them
+              </h5>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="action-strip-1">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <span class="alt-font">Ready to get started?</span> <span class=
+              "title">We're ready to help</span> <i class=
+              "icon pe-7s-look"></i> <a class="text-link" href=
+              "contact-us.html">Start a project with us <i class=
+              "icon ti ti-arrow-right arrow_right"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <a href="index.html" target="_blank"><img alt="logo" class="logo"
+              src="img/appgain-logo.png"></a> <span class="tagline">Mobile App
+              Marketing platform</span>
+            </div>
+
+            <div class="col-sm-6 text-right">
+              <ul class="social-links">
+                <li>
+                  <a href="https://twitter.com/appgain" target=
+                  "_self"><i class="icon ti ti-twitter-alt"></i></a>
+                </li>
+
+                <li>
+                  <a href="https://www.facebook.com/appgain" target=
+                  "_blank"><i class="icon ti ti-facebook"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="footer-lower">
+                <a class="text-link" href=
+                "mailto:hello@appgain.io">hello@appgain.io<i class=
+                "icon ti ti-arrow-right arrow_right"></i></a> <span class=
+                "copyright">© Copyright 2016 Appgain.io</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-74855128-2', 'auto');
+        ga('send', 'pageview');
+    </script> 
+    <script src="js/jquery.min.js">
+    </script> 
+    <script src=
+    "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js">
+    </script> 
+    <script src=
+    "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js">
+    </script> 
+    <script src="js/bootstrap.min.js">
+    </script> 
+    <script src="js/flexslider.min.js">
+    </script> 
+    <script src="js/lightbox.min.js">
+    </script> 
+    <script src="js/twitterfetcher.min.js">
+    </script> 
+    <script src="js/spectragram.min.js">
+    </script> 
+    <script src="js/smooth-scroll.min.js">
+    </script> 
+    <script src="js/jquery.plugin.min.js">
+    </script> 
+    <script src="js/placeholders.min.js">
+    </script> 
+    <script src="js/countdown.min.js">
+    </script> 
+    <script src="js/parallax.js">
+    </script> 
+    <script src="js/scripts.js">
+    </script>
+  </body>
 </html>
