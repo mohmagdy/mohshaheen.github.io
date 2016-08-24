@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://appgain.io/</loc>
+  <lastmod>2016-08-24T09:53:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://appgain.io/index.html</loc>
+  <lastmod>2016-08-24T09:53:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://appgain.io/smart-deeplink.html</loc>
+  <lastmod>2016-08-24T09:38:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://appgain.io/app-backend.html</loc>
+  <lastmod>2016-08-24T09:38:21+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://appgain.io/commingsoon.html</loc>
+  <lastmod>2016-08-24T09:38:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://appgain.io/contact-us.html</loc>
+  <lastmod>2016-08-24T09:38:21+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+</urlset>
